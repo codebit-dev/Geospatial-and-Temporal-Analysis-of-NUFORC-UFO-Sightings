@@ -245,7 +245,7 @@ for _, r in points.iterrows():
                         popup=f"{r.get('datetime')}<br>{r.get('city','')}<br>{r.get('shape','')}").add_to(m)
 
 map_html = m._repr_html_()
-components.html(map_html, height=600)
+components.html(map_html, height=900, width=1000)
 
 # Temporal plots
 st.subheader("Temporal Trends")
@@ -298,3 +298,4 @@ if st.button("Save processed CSV (ufo_processed.csv)"):
 
 # Footer
 st.markdown("Built by: Avinaba Roy, Chetona Roy, Devdeep Hazra, Diya Hazra, Somnath Chakraborty")
+
