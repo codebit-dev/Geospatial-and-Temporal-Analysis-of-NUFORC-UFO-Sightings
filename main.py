@@ -220,7 +220,7 @@ with st.spinner("Clustering..."):
 # Map
 st.subheader("Hotspot Map (Folium)")
 map_center = [filtered_with_clusters['latitude'].mean(), filtered_with_clusters['longitude'].mean()]
-m = folium.Map(location=map_center, zoom_start=3, tiles="CartoDB positron")
+m = folium.Map(location=map_center, zoom_start=3, tiles="Stamen Toner Lite")
 
 # Heatmap
 heat_data = filtered_with_clusters[['latitude','longitude']].dropna().sample(min(sample_map, len(filtered_with_clusters))).values.tolist()
@@ -298,4 +298,5 @@ if st.button("Save processed CSV (ufo_processed.csv)"):
 
 # Footer
 st.markdown("Built by: Avinaba Roy, Chetona Roy, Devdeep Hazra, Diya Hazra, Somnath Chakraborty")
+
 
