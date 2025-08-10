@@ -24,6 +24,30 @@ import os
 
 sns.set_style("darkgrid")
 
+st.set_page_config(
+    page_title="Your Title",
+    layout="wide",
+    initial_sidebar_state="auto",
+    menu_items={
+        'Get Help': None,
+        'Report a bug': None,
+        'About': None
+    }
+)
+
+# Hide Streamlit footer and menu with CSS
+hide_streamlit_style = """
+<style>
+    /* Hide hamburger menu */
+    #MainMenu {visibility: hidden;}
+    /* Hide footer */
+    footer {visibility: hidden;}
+</style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
+
+
 # ==========================================================
 # -------- DATA CLEANING (Person A) --------
 # ==========================================================
@@ -300,6 +324,7 @@ if st.button("Save processed CSV (ufo_processed.csv)"):
 
 # Footer
 st.markdown("Built by: Avinaba Roy, Chetona Roy, Devdeep Hazra, Diya Hazra, Somnath Chakraborty")
+
 
 
 
