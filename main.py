@@ -25,7 +25,7 @@ import os
 sns.set_style("darkgrid")
 
 st.set_page_config(
-    page_title="Your Title",
+    page_title="Geospatial and Temporal Analysis of NUFORC UFO Sightings",
     layout="wide",
     initial_sidebar_state="auto",
     menu_items={
@@ -324,6 +324,7 @@ if st.button("Save processed CSV (ufo_processed.csv)"):
 
 # Footer
 st.markdown("Built by: Avinaba Roy, Chetona Roy, Devdeep Hazra, Diya Hazra, Somnath Chakraborty")
+
 
 
 
